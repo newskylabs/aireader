@@ -1,0 +1,26 @@
+#!/bin/bash
+## =========================================================
+##                    Dietrich Bollmann, Luebeck, 2019/11/24
+## 
+## publish
+## ---------------------------------------------------------
+
+script_path=$(grealpath "$0")
+base_dir=$(dirname $(dirname "${script_path}"))
+
+sourcedir="${base_dir}/www"
+destdir="${base_dir}/docs"
+
+cmd="rsync --archive --verbose --progress --exclude bastel ${sourcedir}/ ${destdir}/"
+
+echo
+echo "${cmd}"
+echo
+
+eval "${cmd}"
+echo
+
+## =========================================================
+## =========================================================
+
+## fin.
