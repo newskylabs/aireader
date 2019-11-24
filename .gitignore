@@ -1,0 +1,11 @@
+# -*- mode: gitignore; -*-
+
+# Ignore emacs temporary files
+*~
+\#*\#
+.\#*
+
+# Ignore directory with html / css / js tinkering stuff
+www/bastel
+
+# fin.
