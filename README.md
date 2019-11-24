@@ -3,6 +3,8 @@
 
 A tool to read Chinese texts
 
+!!! Work in progress !!!
+
 See:
 
   - [Hanzi Reader](https://newskylabs.com/hanzi-reader)
