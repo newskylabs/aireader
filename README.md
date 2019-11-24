@@ -1,4 +1,5 @@
 
-# newskylabs-hanzi-reader
+# Hanzi Reader
 
 A tool to read Chinese texts
+
