@@ -76,6 +76,21 @@ function deval {
 ## build
 ## ---------------------------------------------------------
 
+function git_is_clean () {
+
+  nothing_to_commit=$(git status | grep 'nothing to commit')
+
+  if [ -z "${nothing_to_commit}" ]; then
+    echo false
+  else
+    echo true
+  fi
+}
+
+## =========================================================
+## build
+## ---------------------------------------------------------
+
 function build () {
     
   deval npm run build
@@ -111,7 +126,24 @@ function staging () {
 
 function production () {
 
+  # Check if al changes have been committed
+  if ! $(git_is_clean); then
+    echo "ERROR Please commit all changes before deploying to github!"
+    echo 
+    deval git status
+    echo 
+    exit
+  fi
+
+  build
+
   publish "docs"
+
+  deval git add docs
+  echo
+
+  deval git commit -m "Deploying Hanzi Reader to github"
+  echo
 }
 
 ## =========================================================
