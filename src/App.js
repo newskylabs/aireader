@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
+// TODO: Create and integrate a logo:
+//| import logo from './logo.svg';
 import './App.css';
 
 function App() {
