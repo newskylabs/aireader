@@ -10,8 +10,8 @@
 \#*\#
 .\#*
 
-# Ignore directory with html / css / js tinkering stuff
-bastel
+# Ignore tmp directory
+tmp
 
 ## =========================================================
 ## React
