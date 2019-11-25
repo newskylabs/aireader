@@ -3,24 +3,159 @@
 ##                    Dietrich Bollmann, Luebeck, 2019/11/24
 ## 
 ## publish
+## 
+## Publish the page on github.
 ## ---------------------------------------------------------
 
-script_path=$(grealpath "$0")
-base_dir=$(dirname $(dirname "${script_path}"))
+if [ -z "${NSL_HANZI_READER}" ]; then
+  echo
+  echo "ERROR Environment variable NSL_HANZI_READER undefined!"
+  echo
+  echo "  Please set the environment variable NSL_HANZI_READER"
+  echo "  to the root directory of the Hanzi Reader source tree"
+  echo "  and try again"
+  echo
+  exit
+fi
 
-sourcedir="${base_dir}/www"
-destdir="${base_dir}/docs"
+## =========================================================
+## Usage
+## ---------------------------------------------------------
 
-cmd="rsync --archive --verbose --progress --exclude bastel ${sourcedir}/ ${destdir}/"
+function usage() {
+  cat > /dev/stdout <<EOF
+bin/publish - Publish the page on github.
+
+Options:
+
+   -h, --help           The current help text.
+   --debug              Print commands without executing them
+
+   build                Build the site.
+   staging              Copy the built site into the staging dir
+   production           Copy the built site and deploy it on github
+
+Examples:
+  
+bin/publish --help
+
+bin/publish build staging --debug
+bin/publish production --debug
+
+bin/publish build staging
+bin/publish production
+
+EOF
+  exit;
+}
+
+## =========================================================
+## defaults:
+## ---------------------------------------------------------
+
+# DEBUG mode
+#| debug=true
+debug=false
+
+## =========================================================
+## deval
+## ---------------------------------------------------------
+
+function deval {
+  cmd="$@"
+
+  if ${debug}; then
+    echo "DEBUG ${cmd}"
+  else
+    echo "${cmd}"
+    eval "${cmd}"
+  fi
+}
+
+## =========================================================
+## build
+## ---------------------------------------------------------
+
+function build () {
+    
+  deval npm run build
+}
+
+## =========================================================
+## publish
+## ---------------------------------------------------------
+
+function publish () {
+  destdir="$1"
+
+  sourcedir="build"
+
+  deval rm -r "${destdir}"
+  deval mkdir -p "${destdir}"
+  deval rsync --archive --verbose --progress "${sourcedir}"/ "${destdir}"/
+  deval diff -r "${sourcedir}" "${destdir}"
+}
+
+## =========================================================
+## staging
+## ---------------------------------------------------------
+
+function staging () {
+
+  publish "tmp/hanzi-reader"
+}
+
+## =========================================================
+## production
+## ---------------------------------------------------------
+
+function production () {
+
+  publish "docs"
+}
+
+## =========================================================
+## processing parameters and options:
+## ---------------------------------------------------------
+
+if [ "$#" == 0 ]; then
+  usage
+  exit
+fi
+    
+commands=""
+while (($#)); do
+  case "$1" in
+    -h | --help   ) usage;;
+    -d | --debug  ) debug=true; echo "DEBUG debug mode on" > /dev/stderr;;
+    -*            ) echo "ERROR Unknown option: $1" > /dev/stderr; exit;;
+    build | staging | production ) commands="$commands $1";;
+    *             ) echo "ERROR Unknown parameter: $1" > /dev/stderr; exit;;
+  esac
+  shift
+done
+
+## =========================================================
+## main
+## ---------------------------------------------------------
+
+cd "${NSL_HANZI_READER}"
 
 echo
-echo "${cmd}"
-echo
+echo "Working dir: $(pwd)"
+  
+for command in $commands; do
 
-eval "${cmd}"
+  echo 
+  echo ">>> ${command}"
+  echo 
+  eval "$command"
+
+done
 echo
 
 ## =========================================================
 ## =========================================================
 
 ## fin.
+
