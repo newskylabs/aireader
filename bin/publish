@@ -142,7 +142,13 @@ function production () {
   deval git add docs
   echo
 
-  deval git commit -m "Deploying Hanzi Reader to github"
+  deval 'git commit -m "Deploying Hanzi Reader to github"'
+  echo
+
+  deval git push
+  echo
+  
+  deval git status
   echo
 }
 
