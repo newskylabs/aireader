@@ -37,7 +37,7 @@ import AIReader from './AIReader';
 
 export default function App() {
   return (
-    <Router basename='/hanzi-reader'>
+    <Router basename='/aireader'>
       <div>
         <nav>
           <ul>
