@@ -1,0 +1,32 @@
+/* 
+   Dietrich Bollmann, Luebeck, 2019/12/18
+
+   Colors etc. for debugging the page layout.
+
+   AIReader.debug.css
+
+   Usage: Include for debugging the AIReader CSS code.
+*/
+
+.air-page {
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    display: box;
+    width: 36ex;
+    margin: 3ex;
+    padding: 2ex;
+}
+
+.air-container                 { background-color: #ffd2e8; }
+.air-container-content         { background-color: #fff0f7; }
+.air-hanzi-text                { background-color: pink; }
+.air-hanzi-sentence            { background-color: lightgray; }
+.air-hanzi-container           { background-color: hotpink; }
+.air-pinyin-box                { background-color: lightgreen; }
+.air-hanzi-box                 { background-color: lightcoral; }
+.air-annotation-box            { background-color: blue; }
+.air-word-translation-box      { background-color: tomato; }
+.air-sentence-translation-box  { background-color: green; }
+
+/* fin */

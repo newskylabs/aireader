@@ -1,0 +1,181 @@
+/* 
+   Dietrich Bollmann, Luebeck, 2019/12/18
+
+   AIReader.css
+*/
+
+body {
+    font-family: Microsoft YaHei, Open Sans, Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+div {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+/* hanzi text rendering */
+
+.air-reader {
+}
+
+/* Text */
+
+.air-margin {
+    margin: 3ex;
+}
+
+.air-header {
+}
+
+.air-body {
+}
+
+.air-page {
+    margin: 0.3ex;
+}
+
+.air-container {
+    border-width: 1px 1px 0 1px;
+    border-color: gray;
+    border-style: solid;
+    padding: 1ex 1ex 0 1ex;
+}
+
+.air-container-content {
+    min-height: 2ex;
+}
+
+.air-padding-bottom1 {
+    padding-bottom: 1ex;
+}
+
+.air-padding-bottom04 {
+    padding-bottom: 0.4ex;
+}
+
+.air-container-end {
+    border-width: 0 0 1px 0;
+    border-color: gray;
+    border-style: solid;
+}
+
+.air-translation-container {
+}
+
+.air-word-annotation-container {
+}
+
+.air-hanzi-annotation-container {
+}
+
+.air-button {
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 2ex;
+    padding: 0.5ex 1ex 0.5ex 1ex;
+    margin: 0 0 1.2ex 1.2ex;
+    background-color: lightgray;
+    color: gray;
+    font-size: 0.5em;
+    float: right;
+}
+
+.air-container-title {
+    font-size: 0.4em;
+    color: silver;
+}
+
+.air-container-text {
+    font-size: 1em;
+    min-height: 1.5em;
+    color: black;
+}
+
+.air-text {
+    padding-bottom: 0.1px;
+}
+
+.air-sentence {
+    margin-bottom: 1ex;
+}
+
+.air-word {
+}
+
+.air-hanzi {
+    float: left;
+    margin-bottom: 1ex;
+}
+
+.air-clear-both { clear: both; }
+
+.air-hanzi-pinyin {
+    text-align: center;
+    font-size: 0.8em;
+    padding: .2ex;
+}
+
+.air-hanzi-hanzi {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.air-hanzi-annotation {
+    height: .3ex;
+    margin: 0 .15ex 0 .15ex;
+}
+
+.air-hanzi-translation {
+}
+
+.air-word-translation {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.air-hidden {
+    display: none;    
+}
+
+.air-sentence-translation {
+    font-size: 0.8em;
+}
+
+/* Tones */
+
+/* neutral tone */
+.air-tone0 { color: black; }
+.air-hanzi-annotation.air-tone0 { background-color: black; }
+
+/* 1st tone: - */
+.air-tone1 { color: red; }
+.air-hanzi-annotation.air-tone1 { background-color: red; }
+    
+/* 2nd tone: / */
+.air-tone2 { color: green; }
+.air-hanzi-annotation.air-tone2 { background-color: green; }
+
+/* 3rd tone: v */
+.air-tone3 { color: blue; }
+.air-hanzi-annotation.air-tone3 { background-color: blue; }
+    
+/* 4th tone: \ */
+.air-tone4 { color: blueviolet; }
+.air-hanzi-annotation.air-tone4 { background-color: blueviolet; }
+    
+/* fin */
