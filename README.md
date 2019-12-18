@@ -1,5 +1,5 @@
 
-# Hanzi Reader
+# AIReader
 
 A tool to read Chinese texts
 
@@ -7,8 +7,8 @@ A tool to read Chinese texts
 
 See:
 
-  - [Hanzi Reader](https://newskylabs.com/hanzi-reader)
-    (https://newskylabs.com/hanzi-reader)
+  - [AIReader](https://newskylabs.com/aireader)
+    (https://newskylabs.com/aireader)
 
 
 ## Comments etc.
