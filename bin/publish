@@ -7,11 +7,11 @@
 ## Publish the page on github.
 ## ---------------------------------------------------------
 
-if [ -z "${NSL_HANZI_READER}" ]; then
+if [ -z "${NSL_AIREADER}" ]; then
   echo
-  echo "ERROR Environment variable NSL_HANZI_READER undefined!"
+  echo "ERROR Environment variable NSL_AIREADER undefined!"
   echo
-  echo "  Please set the environment variable NSL_HANZI_READER"
+  echo "  Please set the environment variable NSL_AIREADER"
   echo "  to the root directory of the Hanzi Reader source tree"
   echo "  and try again"
   echo
@@ -117,7 +117,7 @@ function publish () {
 
 function staging () {
 
-  publish "tmp/hanzi-reader"
+  publish "tmp/www/aireader"
 }
 
 ## =========================================================
@@ -171,7 +171,7 @@ done
 ## main
 ## ---------------------------------------------------------
 
-cd "${NSL_HANZI_READER}"
+cd "${NSL_AIREADER}"
 
 echo
 echo "Working dir: $(pwd)"
