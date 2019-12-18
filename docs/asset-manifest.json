@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/aireader/static/css/main.47250da5.chunk.css",
+    "main.js": "/aireader/static/js/main.98b8c58e.chunk.js",
+    "main.js.map": "/aireader/static/js/main.98b8c58e.chunk.js.map",
+    "runtime-main.js": "/aireader/static/js/runtime-main.8066c775.js",
+    "runtime-main.js.map": "/aireader/static/js/runtime-main.8066c775.js.map",
+    "static/js/2.59620a69.chunk.js": "/aireader/static/js/2.59620a69.chunk.js",
+    "static/js/2.59620a69.chunk.js.map": "/aireader/static/js/2.59620a69.chunk.js.map",
+    "index.html": "/aireader/index.html",
+    "precache-manifest.911d83a6700cd9319deb89ca7c3bba0e.js": "/aireader/precache-manifest.911d83a6700cd9319deb89ca7c3bba0e.js",
+    "service-worker.js": "/aireader/service-worker.js",
+    "static/css/main.47250da5.chunk.css.map": "/aireader/static/css/main.47250da5.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8066c775.js",
+    "static/js/2.59620a69.chunk.js",
+    "static/css/main.47250da5.chunk.css",
+    "static/js/main.98b8c58e.chunk.js"
+  ]
+}
