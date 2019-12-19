@@ -25,8 +25,13 @@
 // ---------------------------------------------------------
 
 // =========================================================
-// Data
+// Test Data
 // ---------------------------------------------------------
+
+// =========================================================
+// Example Sentence:
+// ---------------------------------------------------------
+// 
 // 秘密花园   (The Secret Garden)
 // 
 // Taken with permission from:
@@ -38,6 +43,50 @@
 // 
 //   - Sample of 秘密花园 (The Secret Garden)
 //     https://mandarincompanion.com/wp-content/uploads/samples/Mandarin%20Companion%20-%20The%20Secret%20Garden%20(Sample).pdf
+// 
+// ---------------------------------------------------------
+// 
+//   秘密花园。
+//   mìmì huāyuán
+//   The Secret Garden
+// 
+// Vocabulary:
+// 
+//   秘密
+//   mìmì
+//   secret
+// 
+//   花园
+//   huāyuán
+//   garden
+// 
+// Hanzi:
+// 
+//   秘
+//   mì
+//   secret
+// 
+//   密
+//   mì
+//   secret
+// 
+//   花
+//   huā
+//   flower
+// 
+//   园
+//   yuán
+//   garden
+// 
+//   。
+// 
+// Hanzi Tone Colors:
+// 
+//    no tone: black
+//   1st tone: red
+//   2nd tone: green
+//   3rd tone: blue
+//   4th tone: purple
 // 
 // ---------------------------------------------------------
 
